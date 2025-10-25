@@ -33,24 +33,7 @@ export default function Home() {
     <main>
       <Hero />
       
-      <section className="py-16 bg-muted/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-display font-bold text-4xl text-foreground mb-4">
-              Exponentes Destacados
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Conoce a algunos de los especialistas que participarán en la Semana del Cannabis 2025
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {featuredSpeakers.map((speaker, index) => (
-              <SpeakerCard key={index} {...speaker} />
-            ))}
-          </div>
-        </div>
-      </section>
-
+ 
       <ActivitySchedule />
       <RegistrationForm />
     </main>
