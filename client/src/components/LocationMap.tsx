@@ -1,30 +1,71 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, Navigation, Phone, Clock, Car, Train } from "lucide-react";
+import { MapPin, Navigation, Phone, Clock, Video } from "lucide-react";
+
 
 // todo: remove mock functionality - integrate real map when available
-const locationData = {
-  name: "Centro de Convenciones Buenos Aires",
-  address: "Av. Figueroa Alcorta 2230, C1425CLA CABA",
-  coordinates: { lat: -34.5793, lng: -58.3969 },
-  phone: "+54 11 4808-2700",
-  hours: "8:00 - 22:00 (durante el evento)",
-  publicTransport: [
-    "Subte Línea D - Estación Palermo",
-    "Autobuses: 10, 37, 41, 59, 67",
-    "Tren San Martín - Estación Palermo"
-  ],
-  parking: "Estacionamiento disponible en el predio"
-};
+const locationData = [
+  {
+    day: "Lunes",
+    date: "10",
+    name: "Secretaría de Derechos Humanos - Avellaneda",
+    address: "12 de octubre 234, Avellaneda",
+    isVirtual: false,
+    coordinates: { lat: -34.6632, lng: -58.3689 },
+    phone: "+54 11 2102-4082",
+    hours: "9:00 - 18:00"
+  },
+  {
+    day: "Martes",
+    date: "11",
+    name: "Evento Virtual",
+    address: "",
+    isVirtual: true,
+    description: "Transmisión en vivo por YouTube y Zoom. El enlace se enviará por correo a los inscriptos.",
+    phone: "",
+    hours: "17:00 - 21:00"
+  },
+  {
+    day: "Miércoles",
+    date: "12",
+    name: "Centro Cultural de la Memoria Haroldo Conti",
+    address: "Av. Costanera Rafael Obligado 4200, CABA",
+    isVirtual: false,
+    coordinates: { lat: -34.5833, lng: -58.4167 },
+    phone: "+54 11 4774-5000",
+    hours: "10:00 - 20:00"
+  },
+  {
+    day: "Jueves",
+    date: "13",
+    name: "La base cultural : sede de la asociacion canabicultora del sur",
+    address: "Av. Mitre 292, Avellaneda, Buenos Aires",
+    isVirtual: false,
+    coordinates: { lat: -34.6632, lng: -58.3689 },
+    phone: "+54 11 4201-5500",
+    hours: "9:00 - 18:00"
+  },
+  {
+    day: "Viernes",
+    date: "14",
+    name: "Anexo del Congreso de la Nación",
+    address: "Av. Entre Ríos 1234, CABA",
+    isVirtual: false,
+    coordinates: { lat: -34.6037, lng: -58.3816 },
+    phone: "+54 11 4127-7000",
+    hours: "9:00 - 19:00"
+  }
+];
+
 
 export default function LocationMap() {
-  const handleGetDirections = () => {
-    const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(locationData.address)}`;
+  const handleGetDirections = (address: string) => {
+    const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
     window.open(googleMapsUrl, '_blank');
   };
 
-  const handleCall = () => {
-    window.location.href = `tel:${locationData.phone}`;
+  const handleCall = (phone: string) => {
+    window.location.href = `tel:${phone}`;
   };
 
   return (
@@ -32,151 +73,84 @@ export default function LocationMap() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-display font-bold text-4xl text-foreground mb-4">
-            Ubicación del Evento
+            Ubicación por Día
           </h2>
           <p className="text-lg text-muted-foreground">
-            Encuentranos en el corazón de Buenos Aires
+            Cada actividad se realiza en un lugar diferente según el día
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Map Placeholder */}
-          <Card>
-            <CardContent className="p-0">
-              <div className="relative h-96 bg-muted rounded-lg overflow-hidden">
-                {/* Mock map interface */}
-                <div className="absolute inset-0 bg-gradient-to-br from-green-100 to-green-200 dark:from-green-900 dark:to-green-800">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
-                      <p className="text-lg font-semibold text-foreground mb-2">
-                        {locationData.name}
-                      </p>
-                      <p className="text-muted-foreground text-sm max-w-sm" data-testid="text-address">
-                        {locationData.address}
-                      </p>
-                    </div>
-                  </div>
-                  
-                  {/* Mock map elements */}
-                  <div className="absolute top-4 left-4 bg-white dark:bg-card p-2 rounded shadow">
-                    <span className="text-xs font-medium">Buenos Aires</span>
-                  </div>
-                  
-                  {/* Mock streets */}
-                  <div className="absolute inset-0 opacity-20">
-                    <div className="absolute top-1/3 left-0 right-0 h-1 bg-gray-400"></div>
-                    <div className="absolute top-2/3 left-0 right-0 h-1 bg-gray-400"></div>
-                    <div className="absolute top-0 bottom-0 left-1/3 w-1 bg-gray-400"></div>
-                    <div className="absolute top-0 bottom-0 left-2/3 w-1 bg-gray-400"></div>
-                  </div>
-                </div>
-                
-                <Button
-                  className="absolute top-4 right-4"
-                  onClick={handleGetDirections}
-                  data-testid="button-directions"
-                >
-                  <Navigation className="w-4 h-4 mr-2" />
-                  Cómo llegar
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Location Details */}
-          <div className="space-y-6">
-            <Card>
+        <div className="max-w-6xl mx-auto space-y-8">
+          {locationData.map((loc, index) => (
+            <Card key={index}>
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <MapPin className="w-5 h-5" />
-                  Información del Lugar
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-foreground mb-1" data-testid="text-venue-name">
-                    {locationData.name}
-                  </h4>
-                  <p className="text-muted-foreground" data-testid="text-venue-address">
-                    {locationData.address}
-                  </p>
-                </div>
-                
-                <div className="flex items-center gap-2">
-                  <Phone className="w-4 h-4 text-muted-foreground" />
-                  <Button
-                    variant="ghost"
-                    className="p-0 h-auto text-left"
-                    onClick={handleCall}
-                    data-testid="button-call"
-                  >
-                    {locationData.phone}
-                  </Button>
-                </div>
-                
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-muted-foreground" />
-                  <span className="text-muted-foreground" data-testid="text-hours">
-                    {locationData.hours}
+                <CardTitle className="text-xl flex items-center gap-3">
+                  <span className="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">
+                    {loc.date}
                   </span>
+                  {loc.day}
+                  {loc.isVirtual ? (
+                    <Video className="w-5 h-5 text-muted-foreground" />
+                  ) : (
+                    <MapPin className="w-5 h-5 text-muted-foreground" />
+                  )}
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                {/* Nombre del lugar */}
+                <div>
+                  <h3 className="font-bold text-lg text-foreground">{loc.name}</h3>
+                  {!loc.isVirtual && loc.address && (
+                    <p className="text-muted-foreground">{loc.address}</p>
+                  )}
+                  {loc.isVirtual && (
+                    <p className="text-muted-foreground flex items-center gap-2">
+                      <Video className="w-4 h-4" />
+                      {loc.description}
+                    </p>
+                  )}
                 </div>
+
+                {/* Horario y contacto */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="flex items-center gap-2">
+                    <Clock className="w-4 h-4 text-muted-foreground flex-shrink-0" />
+                    <span className="text-muted-foreground">{loc.hours}</span>
+                  </div>
+                  {loc.phone && (
+                    <div className="flex items-center gap-2">
+                      <Phone className="w-4 h-4 text-muted-foreground flex-shrink-0" />
+                      <Button
+                        variant="ghost"
+                        className="p-0 h-auto text-left text-muted-foreground hover:text-foreground"
+                        onClick={() => handleCall(loc.phone!)}
+                      >
+                        {loc.phone}
+                      </Button>
+                    </div>
+                  )}
+                </div>
+
+                {/* Mapa (solo presencial) */}
+                {/* Mapa (solo presencial) */}
+                {/* Mapa real con Google Maps (solo presencial) */}
+                {!loc.isVirtual && loc.address && (
+                  <div className="rounded-lg border overflow-hidden">
+                    <iframe
+                      src={`https://www.google.com/maps?q=${encodeURIComponent(loc.address)}&output=embed`}
+                      width="100%"
+                      height="256"
+                      style={{ border: 0 }}
+                      loading="lazy"
+                      allowFullScreen
+                      title={`Mapa de ${loc.name}`}
+                      className="w-full"
+                    />
+                  </div>
+                )}
               </CardContent>
             </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Train className="w-5 h-5" />
-                  Transporte Público
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  {locationData.publicTransport.map((transport, index) => (
-                    <li key={index} className="flex items-center gap-2 text-muted-foreground">
-                      <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
-                      <span data-testid={`transport-${index}`}>{transport}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Car className="w-5 h-5" />
-                  Estacionamiento
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground" data-testid="text-parking">
-                  {locationData.parking}
-                </p>
-              </CardContent>
-            </Card>
-
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Button
-                className="flex-1"
-                onClick={handleGetDirections}
-                data-testid="button-directions-main"
-              >
-                <Navigation className="w-4 h-4 mr-2" />
-                Obtener Direcciones
-              </Button>
-              <Button
-                variant="outline"
-                className="flex-1"
-                onClick={handleCall}
-                data-testid="button-call-main"
-              >
-                <Phone className="w-4 h-4 mr-2" />
-                Llamar
-              </Button>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

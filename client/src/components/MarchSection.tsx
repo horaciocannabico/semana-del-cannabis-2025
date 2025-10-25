@@ -73,16 +73,6 @@ export default function MarchSection() {
   return (
     <section id="marcha" className="py-16 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="font-display font-bold text-4xl text-foreground mb-4">
-            La Gran Marcha
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            El momento cumbre de la Semana del Cannabis: una manifestación pacífica 
-            que reúne a toda la comunidad en un reclamo histórico por la regulación justa.
-          </p>
-        </div>
-
         <div className="max-w-6xl mx-auto">
           {/* Hero Card */}
           <Card className="mb-8 overflow-hidden">

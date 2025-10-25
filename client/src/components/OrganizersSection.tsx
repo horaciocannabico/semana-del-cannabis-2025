@@ -10,95 +10,39 @@ const organizerCategories = [
     icon: Users,
     organizations: [
       {
-        name: "MAMECANN",
-        description: "Madres en Lucha por el Cannabis Medicinal",
-        focus: ["Cannabis Medicinal", "Derechos de Pacientes"],
-        contact: { email: "info@mamecann.org", website: "www.mamecann.org" }
+        name: "Accion Cannabica",
+        description: "No mas presos por cannabis",
+        imagen: "ACCIONCannabica-LOGO2017-FondoTRANSPARENTE.png",
+        focus: ["Cannabis", "Derechos", "Activismo"],
+        contact: { email: "accioncannabica@gmail.com", website: "www.instagram.com/accannabica/" }
       },
       {
-        name: "Cultivando Derechos",
-        description: "Asociación por la regulación del cannabis",
-        focus: ["Regulación", "Derechos Humanos", "Activismo"],
-        contact: { email: "contacto@cultivandoderechos.org", website: "www.cultivandoderechos.org" }
+        name: "ACS",
+        description: "Asociacion Canabicultura del sur",
+        imagen: "logo_acs_2025.png",
+        focus: ["Regulación", "Cultura", "Cultivo"],
+        contact: { email: "contacto@cultivandoderechos.org", website: "cannabicultoradelsur.com.ar/" }
       },
       {
-        name: "Asociación Argentina de Cannabis",
-        description: "Promoción del uso responsable y la regulación",
-        focus: ["Uso Adulto", "Educación", "Política Pública"],
-        contact: { email: "info@aac.org.ar", website: "www.aac.org.ar" }
+        name: "Doing Canna",
+        imagen: "logodoing.png",
+        description: "Docencia e Investigación Cannábica",
+        focus: ["Docencia", "Investigacion"],
+        contact: { email: "info@aac.org.ar", website: "www.instagram.com/doingcanna/" }
+      },
+      {
+        name: "Colectivo Cannabico Traslasierra",
+        imagen: "traslscolor.png",
+        description: "Asociacion Civil",
+        focus: ["Cultivo", "Activismo"],
+        contact: { email: "info@aac.org.ar", website: "www.instagram.com/nodobuenosairescct/" }
       }
     ]
   },
   {
-    title: "Organizaciones de la Sociedad Civil",
-    icon: Building,
+    title: "Acompañan",
+    icon: Users,
     organizations: [
-      {
-        name: "Centro de Estudios Legales y Sociales (CELS)",
-        description: "Derechos humanos y políticas públicas",
-        focus: ["Derechos Humanos", "Reforma Judicial"],
-        contact: { email: "info@cels.org.ar", website: "www.cels.org.ar" }
-      },
-      {
-        name: "Intercambios Asociación Civil",
-        description: "Reducción de daños y políticas de drogas",
-        focus: ["Reducción de Daños", "Salud Pública"],
-        contact: { email: "info@intercambios.org.ar", website: "www.intercambios.org.ar" }
-      },
-      {
-        name: "Fundación Huésped",
-        description: "Salud pública y derechos humanos",
-        focus: ["Salud Pública", "VIH", "Derechos"],
-        contact: { email: "info@huesped.org.ar", website: "www.huesped.org.ar" }
-      }
-    ]
-  },
-  {
-    title: "Instituciones Académicas",
-    icon: Building,
-    organizations: [
-      {
-        name: "Universidad de Buenos Aires - Facultad de Medicina",
-        description: "Investigación en cannabis medicinal",
-        focus: ["Investigación", "Cannabis Medicinal", "Farmacología"],
-        contact: { email: "cannabis@medicina.uba.ar", website: "www.medicina.uba.ar" }
-      },
-      {
-        name: "CONICET",
-        description: "Consejo Nacional de Investigaciones Científicas",
-        focus: ["Investigación Científica", "Cannabis Terapéutico"],
-        contact: { email: "cannabis@conicet.gov.ar", website: "www.conicet.gov.ar" }
-      },
-      {
-        name: "Universidad Nacional de La Plata",
-        description: "Estudios sobre políticas de drogas",
-        focus: ["Política Pública", "Sociología", "Criminología"],
-        contact: { email: "drogas@unlp.edu.ar", website: "www.unlp.edu.ar" }
-      }
-    ]
-  },
-  {
-    title: "Empresas y Emprendimientos",
-    icon: Building,
-    organizations: [
-      {
-        name: "CannabisArg",
-        description: "Plataforma de información y productos",
-        focus: ["Información", "Productos", "Mercado"],
-        contact: { email: "info@cannabisarg.com", website: "www.cannabisarg.com" }
-      },
-      {
-        name: "Hemporium",
-        description: "Productos de cáñamo industrial",
-        focus: ["Cáñamo Industrial", "Productos Sustentables"],
-        contact: { email: "info@hemporium.com.ar", website: "www.hemporium.com.ar" }
-      },
-      {
-        name: "Green Lab",
-        description: "Laboratorio de investigación y desarrollo",
-        focus: ["I+D", "Cannabis Medicinal", "Calidad"],
-        contact: { email: "lab@greenlab.com.ar", website: "www.greenlab.com.ar" }
-      }
     ]
   }
 ];
@@ -116,15 +60,6 @@ export default function OrganizersSection() {
   return (
     <section id="organizadores" className="py-16 bg-muted/50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="font-display font-bold text-4xl text-foreground mb-4">
-            Organizadores
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            La Semana del Cannabis 2025 es posible gracias al trabajo conjunto de organizaciones,
-            instituciones académicas, empresas y la sociedad civil comprometida con la regulación justa.
-          </p>
-        </div>
 
         <div className="max-w-6xl mx-auto space-y-12">
           {organizerCategories.map((category, categoryIndex) => (
@@ -145,10 +80,26 @@ export default function OrganizersSection() {
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
+                      {/* Imagen (si existe) */}
+                      {org.imagen && (
+                        <div className="flex justify-center mb-4">
+                          <img
+                            src={`/organizadores/${org.imagen}`}
+                            alt={org.name}
+                            className="max-h-48 object-contain"
+                            onError={(e) => {
+                              // Opcional: ocultar imagen si falla la carga
+                              (e.target as HTMLImageElement).style.display = 'none';
+                            }}
+                          />
+                        </div>
+                      )}
+
+
                       <p className="text-muted-foreground mb-4 text-sm" data-testid={`org-desc-${categoryIndex}-${orgIndex}`}>
                         {org.description}
                       </p>
-                      
+
                       <div className="mb-4">
                         <p className="text-sm font-medium text-foreground mb-2">Áreas de enfoque:</p>
                         <div className="flex flex-wrap gap-1">
@@ -159,7 +110,7 @@ export default function OrganizersSection() {
                           ))}
                         </div>
                       </div>
-                      
+
                       <div className="space-y-2">
                         {org.contact.email && (
                           <Button
@@ -173,7 +124,7 @@ export default function OrganizersSection() {
                             <span className="truncate text-xs">{org.contact.email}</span>
                           </Button>
                         )}
-                        
+
                         {org.contact.website && (
                           <Button
                             variant="ghost"
@@ -195,39 +146,6 @@ export default function OrganizersSection() {
           ))}
         </div>
 
-        {/* Contact Section */}
-        <div className="max-w-2xl mx-auto mt-16">
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-center">
-                ¿Quieres formar parte de la organización?
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="text-center">
-              <p className="text-muted-foreground mb-6">
-                Si tu organización está interesada en participar en futuras ediciones 
-                de la Semana del Cannabis, nos encantaría conocerte.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Button 
-                  onClick={() => handleContact('email', 'organizacion@semanalcannabis.org')}
-                  data-testid="button-join-organizers"
-                >
-                  <Mail className="w-4 h-4 mr-2" />
-                  Contactar Organización
-                </Button>
-                <Button 
-                  variant="outline"
-                  onClick={() => handleContact('website', 'www.semanalcannabis.org')}
-                  data-testid="button-visit-website"
-                >
-                  <Globe className="w-4 h-4 mr-2" />
-                  Visitar Sitio Web
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
       </div>
     </section>
   );

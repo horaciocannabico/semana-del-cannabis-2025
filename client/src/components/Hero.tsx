@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Users } from "lucide-react";
-import heroImage from "@assets/generated_images/Cannabis_event_hero_banner_ecc90190.png";
+import heroImage from "@assets/generated_images/LogoSemanaCan.png";
 
 export default function Hero() {
   const handleRegister = () => {
@@ -18,22 +18,24 @@ export default function Hero() {
     <section 
       className="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-primary via-primary/80 to-primary/60"
       style={{
+        backgroundColor: '#000000', // tono verde similar al de tu imagen
         backgroundImage: `linear-gradient(rgba(34, 71, 47, 0.7), rgba(34, 71, 47, 0.8)), url(${heroImage})`,
-        backgroundSize: 'cover',
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
       }}
     >
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl text-white mb-6">
-            Semana del Cannabis
+            Semana Cannabis
             <span className="block text-3xl md:text-4xl lg:text-5xl font-normal mt-2">
               2025
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 mb-8 font-medium">
-            "Por una Regulación Justa y el Fin de la Prohibición"
+            
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
