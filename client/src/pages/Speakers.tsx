@@ -3,7 +3,7 @@ import SpeakerCard from "@/components/SpeakerCard";
 // todo: remove mock functionality
 const allSpeakers = [
   {
-    name: "Dra. María González",
+    name: "Esteban Calabria",
     role: "Investigadora Principal",
     organization: "Instituto Nacional de Cannabis Medicinal",
     bio: "Especialista en neurología con 15 años de experiencia en investigación de cannabinoides. Ha publicado más de 50 artículos sobre el uso terapéutico del cannabis.",
@@ -93,4 +93,5 @@ export default function Speakers() {
       </section>
     </main>
   );
+
 }
