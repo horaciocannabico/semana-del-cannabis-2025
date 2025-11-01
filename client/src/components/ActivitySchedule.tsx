@@ -18,6 +18,173 @@ const scheduleData = [
     image: legalImage,
     activities: [
       {
+        time: "16:00 - 18:00",
+        title: "Cannabis y Derechos Humanos: ¿Por qué regular es un acto de justicia?",
+        description: "Panel con referentes sobre la regulación del cannabis como acto de justicia.",
+        speakers: ["Caio o Estella (Tricomas del Sur)", "Florencia Corbelle (Acuerdo por una regulación legal del cannabis)", "Yacoi (DDHH Avellaneda)", "Tavo Depaoli (Redfac y Acción Cannábica)"],
+        location: "Espacio cultural (por definir)",
+        type: "Presencial",
+        image: legalImage
+      },
+      {
+        time: "19:00 - 21:00",
+        title: "Derechos Humanos, Cannabis y Salud Comunitaria",
+        description: "Problemáticas alrededor del consumo y derechos de los pacientes.",
+        speakers: ["Dr. Carlos Magdalena", "Dr. Pina (derechos de los pacientes, salud mental)", "Facu (ACS)"],
+        location: "UTN Sede Avellaneda",
+        type: "Presencial",
+        image: legalImage
+      }
+    ]
+  },
+  {
+    date: "2025-11-11",
+    dayName: "Martes 11",
+    theme: "Cannabis Medicinal: Ciencia, Acceso y Calidad de Vida",
+    image: medicalImage,
+    activities: [
+      {
+        time: "15:00 - 17:00",
+        title: "La información médica y el aporte de las ONG",
+        description: "Formaciones y experiencias desde las ONG.",
+        speakers: ["Agustin Pabón (FACC+UNSL+AUPAC)", "Diana Barreneche (Legales)", "Laura -ACS (DDHH-UTN)", "Soledad Pedrana (AUPAC)", "Juan Ignacio Gutierrez (Cannalizar-Ciencia Sativa)"],
+        location: "Virtual",
+        type: "Virtual",
+        image: legalImage
+      },
+      {
+        time: "18:00 - 19:30",
+        title: "Salud Cannábica: Información y actualización Reprocann, Prevención y Acompañamiento Médico",
+        description: "Actualización para profesionales de la salud y debate interdisciplinario.",
+        speakers: ["Emilio García (Doingcanna)", "Laura Padovani (Dispositivo de Salud pública en Traslasierra)", "Dispositivo Moreno, San Martín, Morón"],
+        location: "Virtual",
+        type: "Virtual",
+        image: legalImage
+      }
+    ]
+  },
+  {
+    date: "2025-11-12",
+    dayName: "Miércoles 12",
+    theme: "Cannabis Industrial y Nuevas Economías",
+    image: industrialImage,
+    activities: [
+      {
+        time: "11:00 - 12:30",
+        title: "Desafíos y Fracasos: Experiencias Emprendedoras ante la Inestabilidad Normativa",
+        description: "Experiencias de emprendedores frente a ARICCAME e INASE.",
+        speakers: ["Eric Turiansky", "Virginia Romaldi", "Facu Rivadeneira (Cooperativa Criar)", "Candela Grossi"],
+        location: "Virtual",
+        type: "Virtual",
+        image: legalImage
+      },
+      {
+        time: "15:00 - 16:30",
+        title: "Cannabis industrial: adaptarse frente a un contexto regulatorio y económico incierto",
+        description: "Debate sobre proyectos y doctorados en cannabis industrial.",
+        speakers: ["Rolando", "Cogollos Córdoba o Roxana", "Dianita (Gustavo Álvarez-Córdoba)", "Mike Bifari"],
+        location: "Virtual",
+        type: "Virtual",
+        image: legalImage
+      }
+    ]
+  },
+  {
+    date: "2025-11-13",
+    dayName: "Jueves 13",
+    theme: "Cannabis, Cultura y Uso Responsable",
+    image: culturalImage,
+    activities: [
+      {
+        time: "11:00 - 12:30",
+        title: "Del estigma a la responsabilidad: Usos, derechos y realidades",
+        description: "Consumo adulto y ética social hacia una regulación humanizada.",
+        speakers: ["Barbies testeadoras (México)", "Martin Macu (Río Gallegos)", "ARDA", "Facu ACS"],
+        location: "Virtual",
+        type: "Virtual",
+        image: legalImage
+      },
+      {
+        time: "19:30",
+        title: "Obra de teatro Pabellón séptimo",
+        description: "Presentación teatral relacionada con derechos humanos.",
+        speakers: [],
+        location: "El Infierno, Secretaría de DDHH Avellaneda",
+        type: "Presencial",
+        image: legalImage
+      }
+    ]
+  },
+  {
+    date: "2025-11-14",
+    dayName: "Viernes 14",
+    theme: "Incidencia Política: Cannabis en la Agenda Pública",
+    image: legalImage,
+    activities: [
+      {
+        time: "15:00 - 16:45",
+        title: "Reforma Penal y Persecución al Usuario de Cannabis",
+        description: "Debate sobre cambio de paradigma legal.",
+        speakers: ["Fausto (Red Federal)", "Joe Stefanolo", "Bettiana o Kasandra"],
+        location: "Auditorio Anexo Cámara de Diputados",
+        type: "Presencial",
+        image: legalImage
+      },
+      {
+        time: "17:00 - 19:45",
+        title: "Ley 23.737 y su impacto: Derechos vulnerados y caminos a la Reforma",
+        description: "Mesa de análisis sobre la reforma legal.",
+        speakers: ["Florencia Corbelle", "Nico Milione (Acción Cannábica - FACC)", "Facu ACS", "Nermi (Jardín del Unicornio)"],
+        location: "Auditorio Anexo Cámara de Diputados",
+        type: "Presencial",
+        image: legalImage
+      },
+      {
+        time: "19:45",
+        title: "Conclusión y cierre de la Semana Cannabis",
+        description: "Propuestas y declaración conjunta de organizaciones.",
+        speakers: ["Representantes de organizaciones"],
+        location: "Auditorio Anexo Cámara de Diputados",
+        type: "Presencial",
+        image: legalImage
+      }
+    ]
+  },
+  {
+    date: "2025-11-15",
+    dayName: "Sábado 15",
+    theme: "La Gran Marcha: Por una Regulación Justa",
+    image: marchImage,
+    activities: [
+      {
+        time: "14:00 - 17:00",
+        title: "Pre-Marcha: Festival Cultural",
+        description: "Música, DJs, performances y stands informativos",
+        speakers: ["Artistas", "Organizaciones"],
+        location: "Plaza de Concentración",
+        type: "Presencial"
+      },
+      {
+        time: "18:00",
+        title: "15ª Marcha Nacional de la Marihuana",
+        description: "Recorrido por Buenos Aires",
+        speakers: ["Toda la comunidad"],
+        location: "Desde Plaza hasta Congreso",
+        type: "Presencial"
+      }
+    ]
+  }
+];
+
+
+/*const scheduleData = [
+  {
+    date: "2025-11-10",
+    dayName: "Lunes 10",
+    theme: "Cannabis y Sociedad: Desafíos Legales y Derechos Humanos",
+    image: legalImage,
+    activities: [
+      {
         time: "11:00",
         title: "Conferencia de Prensa de Lanzamiento",
         description: "Presentación de objetivos y agenda de actividades",
@@ -195,7 +362,7 @@ const scheduleData = [
       }
     ]
   }
-];
+];*/
 
 export default function ActivitySchedule() {
   const [selectedDay, setSelectedDay] = useState(0);
@@ -208,17 +375,6 @@ export default function ActivitySchedule() {
   return (
     <section id="actividades" className="py-16 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="font-display font-bold text-4xl md:text-5xl text-foreground mb-4">
-            Cronograma de Actividades
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Una semana completa de actividades que abordan todos los aspectos del cannabis: 
-            legal, medicinal, industrial, cultural y político.
-          </p>
-        </div>
-
-        {/* Day Navigation */}
         <div className="flex flex-wrap gap-2 justify-center mb-8">
           {scheduleData.map((day, index) => (
             <Button

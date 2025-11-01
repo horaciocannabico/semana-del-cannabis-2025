@@ -9,7 +9,7 @@ export default function Footer() {
     console.log(`Social media click: ${platform}`);
     // Mock social media links
     const urls = {
-      facebook: 'https://facebook.com/semanalcannabis2025',
+      facebook: 'https://www.facebook.com/semanacannabica',
       twitter: 'https://twitter.com/cannabis2025',
       instagram: 'https://instagram.com/semanalcannabis2025'
     };
@@ -142,21 +142,10 @@ export default function Footer() {
                 <Button 
                   variant="ghost" 
                   className="p-0 h-auto text-muted-foreground hover:text-foreground text-sm"
-                  onClick={() => handleContactClick('email', 'info@semanalcannabis2025.org')}
+                  onClick={() => handleContactClick('email', 'semanadelcannabis25@gmail.com')}
                   data-testid="footer-email"
                 >
-                  info@semanalcannabis2025.org
-                </Button>
-              </div>
-              <div className="text-sm">
-                <p className="text-foreground font-medium mb-1">Prensa y Medios:</p>
-                <Button 
-                  variant="ghost" 
-                  className="p-0 h-auto text-muted-foreground hover:text-foreground text-sm"
-                  onClick={() => handleContactClick('email', 'prensa@semanalcannabis2025.org')}
-                  data-testid="footer-press-email"
-                >
-                  prensa@semanalcannabis2025.org
+                  semanadelcannabis25@gmail.com
                 </Button>
               </div>
             </div>

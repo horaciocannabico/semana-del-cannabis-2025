@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, MapPin, Users, Megaphone, Heart } from "lucide-react";
-import marchImage from "@assets/generated_images/Cannabis_legalization_march_1ac6c85a.png";
+import marchImage from "@assets/generated_images/marcha-cannabis4jpg.webp";
 
 // todo: remove mock functionality
 const marchData = {
@@ -19,32 +19,31 @@ const marchData = {
     "Fundación por los Derechos Cannábicos"
   ],
   objectives: [
-    "Visibilizar la demanda social por la regulación del cannabis",
-    "Reclamar por una política de drogas basada en derechos humanos",
-    "Denunciar la criminalización de usuarios medicinales y recreativos",
-    "Exigir la liberación de detenidos por cannabis",
-    "Promover el debate público informado sobre regulación cannábica"
+    "BASTA DE PERSONAS PRESAS POR MARIHUANA.",
+    "EL PROHIBICIONISMO MATA.",
+    "BASTA DE VIOLENCIA MACHISTA Y PATRIARCAL EN NUESTRA COMUNIDAD.",
+    "POR UNA NUEVA LEY DE DROGAS, REGULACIÓN DE LA MARIHUANA YA!"
   ],
   activities: [
     {
       time: "14:00 - 17:00",
       title: "Pre-Marcha: Festival Cultural",
-      description: "Música en vivo, DJs, stands informativos y performances artísticas"
+      description: "Streaming en vivo, DJs, stands informativos y performances artísticas"
     },
     {
-      time: "18:00",
+      time: "17:00",
       title: "Inicio de la Marcha",
       description: "Concentración en Plaza de Mayo"
     },
     {
-      time: "19:30",
+      time: "18:30",
       title: "Llegada al Congreso",
-      description: "Lectura del documento final con reclamos y propuestas"
+      description: "Concentración frente al Congreso Nacional"
     },
     {
-      time: "20:00",
-      title: "Cierre Musical",
-      description: "Conciertos de bandas y artistas reconocidos"
+      time: "19:00",
+      title: "Lectura del documento final y cierre",
+      description: "Con reclamos y propuestas"
     }
   ]
 };
@@ -58,7 +57,7 @@ export default function MarchSection() {
   const handleShareMarch = () => {
     console.log("Compartir marcha triggered");
     const text = `Únete a la ${marchData.title} - ${marchData.date} en Buenos Aires. #Cannabis2025 #RegulacionJusta`;
-    
+
     if (navigator.share) {
       navigator.share({
         title: marchData.title,
@@ -77,8 +76,8 @@ export default function MarchSection() {
           {/* Hero Card */}
           <Card className="mb-8 overflow-hidden">
             <div className="relative">
-              <img 
-                src={marchImage} 
+              <img
+                src={marchImage}
                 alt="Marcha Nacional de la Marihuana"
                 className="w-full h-64 md:h-80 object-cover"
               />
@@ -132,6 +131,15 @@ export default function MarchSection() {
                         <p className="text-muted-foreground" data-testid="text-end-location">{marchData.endLocation}</p>
                       </div>
                     </div>
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m34!1m12!1m3!1d3283.816367150796!2d-58.383566398623714!3d-34.60880473494799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m19!3e2!4m5!1s0x95bccac2cd859503%3A0x75cdafaaef2b946!2sCongreso%20de%20la%20Naci%C3%B3n%20Argentina%2C%20Avenida%20Entre%20R%C3%ADos%2C%20Buenos%20Aires!3m2!1d-34.6098208!2d-58.392606099999995!4m5!1s0x95bccad0457fa6a3%3A0x30fde298fbcd7cf!2sAv.%20de%20Mayo%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!3m2!1d-34.609046899999996!2d-58.381093!4m5!1s0x95bccadb57fd1e5f%3A0xcc737c4eb0a8614b!2sPlaza%20de%20Mayo!3m2!1d-34.6083667!2d-58.3722832!5e0!3m2!1sen!2sar!4v1761965125301!5m2!1sen!2sar"
+                      width="100%"
+                      height="450"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
                   </div>
                 </CardContent>
               </Card>
@@ -190,22 +198,35 @@ export default function MarchSection() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Heart className="w-5 h-5" />
-                    Organizaciones Convocantes
+                    Seguinos
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
-                    {marchData.organizers.map((organizer, index) => (
-                      <Badge key={index} variant="secondary" data-testid={`organizer-${index}`}>
-                        {organizer}
+                    <a
+                      href="https://www.instagram.com/marchamarihuanaamba/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Badge variant="secondary">
+                        @marchamarihuanaamba
                       </Badge>
-                    ))}
+                    </a>
+                    <a
+                      href="https://www.instagram.com/marchadelamarihuanaarg/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Badge variant="secondary">
+                        @marchadelamarihuanaarg
+                      </Badge>
+                    </a>
                   </div>
                 </CardContent>
               </Card>
 
               <div className="flex flex-col sm:flex-row gap-3">
-                <Button 
+                <Button
                   className="flex-1"
                   onClick={handleParticipate}
                   data-testid="button-participate-march"
@@ -213,7 +234,7 @@ export default function MarchSection() {
                   <Users className="w-4 h-4 mr-2" />
                   Participar
                 </Button>
-                <Button 
+                <Button
                   variant="outline"
                   className="flex-1"
                   onClick={handleShareMarch}

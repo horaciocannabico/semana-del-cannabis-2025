@@ -2,6 +2,8 @@ import Hero from "@/components/Hero";
 import ActivitySchedule from "@/components/ActivitySchedule";
 import SpeakerCard from "@/components/SpeakerCard";
 import RegistrationForm from "@/components/RegistrationForm";
+import { Button } from "@/components/ui/button";
+import { Calendar, MapPin, Users } from "lucide-react";
 
 // todo: remove mock functionality
 const featuredSpeakers = [
@@ -29,12 +31,60 @@ const featuredSpeakers = [
 ];
 
 export default function Home() {
+    const handleRegister = () => {
+    console.log("Registro triggered");
+    // Scroll to registration section or navigate
+    document.getElementById("registro")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleViewSchedule = () => {
+    console.log("Ver cronograma triggered");
+    document.getElementById("actividades")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <main>
       <Hero />
-      
+       <div className="container mx-auto px-4 text-center relative z-10 flex flex-col items-center justify-center mt-4 mb-12">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <div className="flex items-center gap-2 text-black/90">
+              <Calendar className="w-5 h-5" />
+              {/* Texto fecha */}
+            </div>
+            <div className="flex items-center gap-2 text-black/90">
+              <MapPin className="w-5 h-5" />
+              <span className="font-medium">Buenos Aires, Argentina</span>
+            </div>
+            <div className="flex items-center gap-2 text-black/90">
+              <Users className="w-5 h-5" />
+              <span className="font-medium">Presencial y Virtual</span>
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              size="lg"
+              className="bg-white text-primary hover:bg-black/10  font-semibold px-8"
+              onClick={handleRegister}
+              data-testid="button-register-hero"
+            >
+              Registrarse Ahora
+            </Button>
+            <Button
+              size="lg"
+              
+              className="bg-white text-primary hover:bg-black/10  font-semibold px-8"
+              onClick={handleViewSchedule}
+              data-testid="button-schedule-hero"
+            >
+              Ver Cronograma
+            </Button>
+          </div>
+        </div>
+      </div>     
  
-      <ActivitySchedule />
+ 
       <RegistrationForm />
     </main>
   );

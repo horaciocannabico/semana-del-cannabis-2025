@@ -76,7 +76,7 @@ export default function OrganizersSection() {
                   <Card key={orgIndex} className="hover-elevate">
                     <CardHeader>
                       <CardTitle className="text-lg" data-testid={`org-name-${categoryIndex}-${orgIndex}`}>
-                        {org.name}
+                        {/*org.name*/}
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
