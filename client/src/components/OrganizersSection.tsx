@@ -21,21 +21,21 @@ const organizerCategories = [
         description: "Asociacion Canabicultura del sur",
         imagen: "logo_acs_2025.png",
         focus: ["Regulación", "Cultura", "Cultivo"],
-        contact: { email: "contacto@cultivandoderechos.org", website: "cannabicultoradelsur.com.ar/" }
+        contact: { email: "canabiculturadelsur@gmail.com", website: "cannabicultoradelsur.com.ar/" }
       },
       {
         name: "Doing Canna",
         imagen: "logodoing.png",
         description: "Docencia e Investigación Cannábica",
         focus: ["Docencia", "Investigacion"],
-        contact: { email: "info@aac.org.ar", website: "www.instagram.com/doingcanna/" }
+        contact: { email: "info.doingcanna@gmail.com", website: "www.instagram.com/doingcanna/" }
       },
       {
         name: "Colectivo Cannabico Traslasierra",
-        imagen: "traslscolor.png",
+        imagen: "traslscolor2.png",
         description: "Asociacion Civil",
         focus: ["Cultivo", "Activismo"],
-        contact: { email: "info@aac.org.ar", website: "www.instagram.com/nodobuenosairescct/" }
+        contact: { email: "colectivocannabicotraslasierra@gmail.com", website: "www.instagram.com/nodobuenosairescct/" }
       }
     ]
   },
@@ -43,6 +43,112 @@ const organizerCategories = [
     title: "Acompañan",
     icon: Users,
     organizations: [
+      {
+        name: "FACC",
+        imagen: "logoblancofacc.png",
+        description: "Asociacion Civil",
+        focus: ["Cultivo", "Activismo"],
+        contact: { email: "info@aac.org.ar", website: "https://www.instagram.com/faccarg/" }
+      },
+      {
+        name: "Ciencia Sativa",
+        imagen: "CSativaImagotipo.png",
+        description: "Asociacion Civil",
+        focus: ["Cultivo", "Activismo"],
+        contact: { email: "ccsbariloche@gmail.com", website: "https://www.instagram.com/ciencia.sativa/" }
+      },
+      {
+        name: "AUPAC",
+        imagen: "Aupac.png",
+        description: "Asociacion Civil",
+        focus: ["Cultivo", "Activismo"],
+        contact: { email: "info@aac.org.ar", website: "https://www.instagram.com/aupac_/" }
+      },
+      {
+        name: "Proyecto Cañamo",
+        imagen: "proyectocan.png",
+        description: "Asociacion Civil",
+        focus: ["Cultivo", "Activismo"],
+        contact: { email: "proyectocanamo@gmail.com", website: "https://www.instagram.com/proyectocanamo/" }
+      },
+      {
+        name: "Cannabis Medicinal Bahia Blanca",
+        imagen: "Cbahiablanca.png",
+        description: "Asociacion Civil",
+        focus: ["Cultivo", "Activismo"],
+        contact: { email: "info@aac.org.ar", website: "https://www.cannabisysalud.org/" }
+      },
+      {
+        name: "Jardin del Unicornio",
+        imagen: "junicorno.png",
+        description: "Club de Cultivo",
+        focus: ["Club", "Cultivo"],
+        contact: { email: "jardindelunicornio.ccc@gmail.com", website: "https://www.instagram.com/jardindelunicornio" }
+      },
+      {
+        name: "Tricomas del Sur",
+        imagen: "tsur.png",
+        description: "Asociacion Civil",
+        focus: ["Cultivo", "Activismo"],
+        contact: { email: "", website: "" }
+      },
+      {
+        name: "Flores de Libertad",
+        imagen: "FloresdeLibertad.png",
+        description: "Asociacion Civil",
+        focus: ["Cultivo", "Activismo"],
+        contact: { email: "", website: "" }
+      },
+      {
+        name: "Cultivando Derechos",
+        imagen: "cultivandoderechospng.png",
+        description: "Club de Cultivo",
+        focus: ["Club", "Cultivo"],
+        contact: { email: "", website: "" }
+      },
+      {
+        name: "Red Federal de Abogacia Cannabica",
+        imagen: "Arfac1.png",
+        description: "Red Federal de Abogacia Cannabica",
+        focus: ["Legales", "Cannabis"],
+        contact: { email: "", website: "" }
+      },
+      {
+        name: "Espacio de Memoria",
+        imagen: "EspMemoria.png",
+        description: "Espacio de Memoria",
+        focus: ["Memoria", "Derechos Humanos"],
+        contact: { email: "", website: "" }
+      },
+      {
+        name: "Secretaria de Derechos Humanos",
+        imagen: "SecDDHH.png",
+        description: "Secretaria de Derechos Humanos",
+        focus: ["Memoria", "Derechos Humanos"],
+        contact: { email: "", website: "" }
+      },
+
+      {
+        name: "Programa de Antropologia",
+        imagen: "LogoPrograma.png",
+        description: "Política y Juridica Cannábica",
+        focus: ["Investigacion"],
+        contact: { email: "", website: "" }
+      },
+      {
+        name: "UTN",
+        imagen: "UTN.png",
+        description: "Universidad",
+        focus: ["Universidad", "Investigacion"],
+        contact: { email: "", website: "" }
+      },
+      {
+        name: "Nogoya",
+        imagen: "nogoya.png",
+        description: "Obra de Teatro",
+        focus: ["Teatro", "Cultura"],
+        contact: { email: "", website: "" }
+      }
     ]
   }
 ];

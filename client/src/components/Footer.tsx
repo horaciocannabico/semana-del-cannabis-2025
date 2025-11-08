@@ -10,8 +10,8 @@ export default function Footer() {
     // Mock social media links
     const urls = {
       facebook: 'https://www.facebook.com/semanacannabica',
-      twitter: 'https://twitter.com/cannabis2025',
-      instagram: 'https://instagram.com/semanalcannabis2025'
+      twitter: 'https://x.com/SemanaCannabis',
+      instagram: 'https://www.instagram.com/semanacannabis'
     };
     
     if (urls[platform as keyof typeof urls]) {

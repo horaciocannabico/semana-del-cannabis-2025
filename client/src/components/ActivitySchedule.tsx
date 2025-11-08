@@ -8,145 +8,275 @@ import medicalImage from "@assets/generated_images/Medical_cannabis_research_lab
 import industrialImage from "@assets/generated_images/Industrial_hemp_products_showcase_42e35756.png";
 import culturalImage from "@assets/generated_images/Cannabis_cultural_art_exhibition_94bbc094.png";
 import marchImage from "@assets/generated_images/Cannabis_legalization_march_1ac6c85a.png";
+import { Link } from "wouter";
+
 
 // todo: remove mock functionality
 const scheduleData = [
   {
-    date: "2025-11-10",
-    dayName: "Lunes 10",
+    "date": "2025-11-10",
+    "dayName": "Lunes 10",
     theme: "Cannabis y Sociedad: Desafíos Legales y Derechos Humanos",
     image: legalImage,
-    activities: [
+    "activities": [
       {
-        time: "16:00 - 18:00",
-        title: "Cannabis y Derechos Humanos: ¿Por qué regular es un acto de justicia?",
-        description: "Panel con referentes sobre la regulación del cannabis como acto de justicia.",
-        speakers: ["Caio o Estella (Tricomas del Sur)", "Florencia Corbelle (Acuerdo por una regulación legal del cannabis)", "Yacoi (DDHH Avellaneda)", "Tavo Depaoli (Redfac y Acción Cannábica)"],
-        location: "Espacio cultural (por definir)",
-        type: "Presencial",
-        image: legalImage
+        "time": "16:00 - 17:00",
+        "title": "Cannabis y Derechos Humanos",
+        "description": " ¿Por qué regular es un acto de justicia?",
+        "speakers": [
+          "Ricardo Eugenio Molinario | Asociación Civil Tricomas del Sur",
+          "Stella Maris Nuñez | Asociación Civil Tricomas del Sur",
+          "Florencia Corbelle | Programa de Antropología Política y Jurídica, Instituto de Ciencias Antropológicas, UBA/CONICET",
+          "Claudio Yacoy | Secretario DDHH Partido de Avellaneda",
+          "Abg. Gustavo Depaoli | Asociación Civil Acción Cannábica, Red Federal de Abogacía Cannábica (ARFAC) | Secretaria legales  Federación Argentina de Cannabis y Cáñamo (FACC)",
+        ],
+        moderators: [
+          "Federico Ruecco | Asociación Cannabicultora del Sur (ACS) | FACC"
+        ],
+        "location": "Casa del Bicentenario | Colón 746, Partido de Avellaneda",
+        "type": "Presencial",
+        "image": "legalImage"
       },
       {
-        time: "19:00 - 21:00",
-        title: "Derechos Humanos, Cannabis y Salud Comunitaria",
-        description: "Problemáticas alrededor del consumo y derechos de los pacientes.",
-        speakers: ["Dr. Carlos Magdalena", "Dr. Pina (derechos de los pacientes, salud mental)", "Facu (ACS)"],
-        location: "UTN Sede Avellaneda",
-        type: "Presencial",
-        image: legalImage
+        "time": "17:00 - 18:00",
+        "title": "Modelos Asociativos",
+        "description": "",
+        "speakers": [
+          "Nermi Zappia | Jardín del Unicornio",
+          "Julian Pere | Jardín del Unicornio",
+          "Juan Palomino | Cultivando Derecho",
+          "Federico Sinagra | Cultivando Derecho",
+          "Facundo De Luca | Asociación Cannabicultora del Sur | FACC",
+          "Flores de Libertad | Colectivo",
+          
+        ],
+        moderators: [
+          "Federico Ruecco | Asociación Cannabicultora del Sur | FACC"
+        ],
+        "location": "Casa del Bicentenario | Colón 746, Partido de Avellaneda",
+        "type": "Presencial",
+        "image": "legalImage"
+      },
+      {
+        "time": "19:00 - 21:00",
+        "title": "Derechos Humanos, Cannabis y Salud Comunitaria",
+        "description": "",
+        "speakers": [
+          "Dr. Daniel Pina | Derechos Humanos, Cannabis y Salud Comunitaria",
+          "Dr. Carlos Magdalena | Clase Magistral Trastorno del  Stress Postraumático ",
+
+        ],
+        moderators: [
+          "Dr. Emilio García | Doingcanna | Secretario de Salud  Federación Argentina de Cannabis y Cañamo (FACC) | Director Científico  Cannamerica | Médico  Investigador "
+        ],
+        "location": "UTN Sede Avellaneda | Av. Bartolomé Mitre 750, Partido de Avellaneda",
+        "type": "Presencial",
+        "image": "legalImage"
       }
     ]
   },
   {
-    date: "2025-11-11",
-    dayName: "Martes 11",
-    theme: "Cannabis Medicinal: Ciencia, Acceso y Calidad de Vida",
-    image: medicalImage,
-    activities: [
-      {
-        time: "15:00 - 17:00",
-        title: "La información médica y el aporte de las ONG",
-        description: "Formaciones y experiencias desde las ONG.",
-        speakers: ["Agustin Pabón (FACC+UNSL+AUPAC)", "Diana Barreneche (Legales)", "Laura -ACS (DDHH-UTN)", "Soledad Pedrana (AUPAC)", "Juan Ignacio Gutierrez (Cannalizar-Ciencia Sativa)"],
-        location: "Virtual",
-        type: "Virtual",
-        image: legalImage
-      },
-      {
-        time: "18:00 - 19:30",
-        title: "Salud Cannábica: Información y actualización Reprocann, Prevención y Acompañamiento Médico",
-        description: "Actualización para profesionales de la salud y debate interdisciplinario.",
-        speakers: ["Emilio García (Doingcanna)", "Laura Padovani (Dispositivo de Salud pública en Traslasierra)", "Dispositivo Moreno, San Martín, Morón"],
-        location: "Virtual",
-        type: "Virtual",
-        image: legalImage
-      }
-    ]
-  },
-  {
-    date: "2025-11-12",
-    dayName: "Miércoles 12",
-    theme: "Cannabis Industrial y Nuevas Economías",
-    image: industrialImage,
-    activities: [
-      {
-        time: "11:00 - 12:30",
-        title: "Desafíos y Fracasos: Experiencias Emprendedoras ante la Inestabilidad Normativa",
-        description: "Experiencias de emprendedores frente a ARICCAME e INASE.",
-        speakers: ["Eric Turiansky", "Virginia Romaldi", "Facu Rivadeneira (Cooperativa Criar)", "Candela Grossi"],
-        location: "Virtual",
-        type: "Virtual",
-        image: legalImage
-      },
-      {
-        time: "15:00 - 16:30",
-        title: "Cannabis industrial: adaptarse frente a un contexto regulatorio y económico incierto",
-        description: "Debate sobre proyectos y doctorados en cannabis industrial.",
-        speakers: ["Rolando", "Cogollos Córdoba o Roxana", "Dianita (Gustavo Álvarez-Córdoba)", "Mike Bifari"],
-        location: "Virtual",
-        type: "Virtual",
-        image: legalImage
-      }
-    ]
-  },
-  {
-    date: "2025-11-13",
-    dayName: "Jueves 13",
-    theme: "Cannabis, Cultura y Uso Responsable",
-    image: culturalImage,
-    activities: [
-      {
-        time: "11:00 - 12:30",
-        title: "Del estigma a la responsabilidad: Usos, derechos y realidades",
-        description: "Consumo adulto y ética social hacia una regulación humanizada.",
-        speakers: ["Barbies testeadoras (México)", "Martin Macu (Río Gallegos)", "ARDA", "Facu ACS"],
-        location: "Virtual",
-        type: "Virtual",
-        image: legalImage
-      },
-      {
-        time: "19:30",
-        title: "Obra de teatro Pabellón séptimo",
-        description: "Presentación teatral relacionada con derechos humanos.",
-        speakers: [],
-        location: "El Infierno, Secretaría de DDHH Avellaneda",
-        type: "Presencial",
-        image: legalImage
-      }
-    ]
-  },
-  {
-    date: "2025-11-14",
-    dayName: "Viernes 14",
-    theme: "Incidencia Política: Cannabis en la Agenda Pública",
+    "date": "2025-11-11",
+    "dayName": "Martes 11",
+    "theme": "Cannabis Medicinal: Educación, Acceso y Calidad de Vida",
     image: legalImage,
-    activities: [
+    "activities": [
       {
-        time: "15:00 - 16:45",
-        title: "Reforma Penal y Persecución al Usuario de Cannabis",
-        description: "Debate sobre cambio de paradigma legal.",
-        speakers: ["Fausto (Red Federal)", "Joe Stefanolo", "Bettiana o Kasandra"],
-        location: "Auditorio Anexo Cámara de Diputados",
-        type: "Presencial",
-        image: legalImage
+        "time": "15:00 - 17:00",
+        "title": "El conocimiento como semilla",
+        "description": "Articulaciones entre universidad y sociedad civil en la formación cannábica",
+        "speakers": [
+          "Agustin Pabón Maciel | Curso de Extensión Universitaria “Formación técnica para responsables de cultivo de Cannabis sativa L.” | Programa Cannabis - UNSL, AUPAC y FACC",
+          "Diana Barreneche | Diplomatura de Extensión Universitaria “Aspectos estructurales para el desarrollo de la cannabis en Argentina y la región. Dimensiones jurídicas, sociales y ambientales.” | Programa Cannabis - UNSL, AUPAC y Proyecto Cáñamo",
+          "Laura Scuteri | Diplomatura “Cannabis y Derechos Humanos.” | UTN Avellaneda, Asociación Cannabicultora del Sur (ACS) y Secretaría de Derechos Humanos de la municipalidad de Avellaneda",
+          "Sabrina Pimpinella | Posgrado “Abordaje integral de la planta de Cannabis para la Salud” | UNR, Asociación civil AUPAC",
+          "Dr. Juan Ignacio Gutierrez Garbiero | Docente de la “Diplomatura Superior en Cannabis y sus usos medicinales” (UNAJ) | Investigador en Salud | Co-fundador de Cannalizar.ar, Asociación Civil Ciencia Sativa (ACCS)",
+          "Karina Romanelli | Diplomatura Superior Universitaria: En Cannabis Terapéutico | Universidad Nacional del Sur, Departamento de Biología Bioquímica y Farmacia | Asociación Civil Cultivo Mi Medicina"
+        ],
+        "moderators": [
+          "Soledad Pedrana | Secretaría de Educación de la Federación Argentina de Cannabis y Cáñamo (FACC)"
+        ],
+        "location": "Canal de YouTube @semanadelcannabis",
+        "type": "Virtual",
+        "image": "legalImage"
       },
       {
-        time: "17:00 - 19:45",
-        title: "Ley 23.737 y su impacto: Derechos vulnerados y caminos a la Reforma",
-        description: "Mesa de análisis sobre la reforma legal.",
-        speakers: ["Florencia Corbelle", "Nico Milione (Acción Cannábica - FACC)", "Facu ACS", "Nermi (Jardín del Unicornio)"],
-        location: "Auditorio Anexo Cámara de Diputados",
-        type: "Presencial",
-        image: legalImage
+        "time": "18:00 - 19:30",
+        "title": "Del consultorio al territorio",
+        "description": "Experiencias en salud pública y Cannabis, actualización REPROCANN y espacio de debate",
+        "speakers": [
+          "Dr. Emilio García | Doingcanna | Secretario de Salud Federación Argentina de Cannabis y Cañamo (FACC)| Director Científico Cannamerica | Médico Investigador",
+          "Dra. Laura Padovani | Dispositivo de Salud Cannábica (Dispensario de San Lorenzo / Hospital Regional de Mina Clavero)",
+          "Alejandro Alvarez | Presidente Asociación Civil Colectivo Cannábico Traslasierra | FACC",
+          "Karina Romanelli | Asociación Civil Cultivo Mi Medicina | Consejo Consultivo Honorario del Programa de Cannabis Medicinal (REPROCANN)",
+          "Jorge Capriotti | Médico neurólogo - Universidad Nacional de Rosario | Docente Clínica Médica y tutor de residencia en la carrera de posgrado Neurología (UNR) | Consultorio de cannabis del Hospital Centenario de Rosario",
+          "Carina Villarreal | Doingcanna | Secretaria de Salud FACC"
+        ],
+        "moderators": [
+          "Natalia Castro | Asociación Civil Colectivo Cannábico Traslasierra | Secretaria de Comunicación Federación Argentina de Cannabis y Cáñamo (FACC)",
+          "Carina Villarreal | Doingcanna | Secretaria de Salud FACC"
+        ],
+        "location": "Canal de YouTube @semanadelcannabis",
+        "type": "Virtual",
+        "image": "legalImage"
+      }
+    ]
+  },
+
+  {
+    "date": "2025-11-12",
+    "dayName": "Miércoles 12",
+    "theme": "Desafíos Emprendedores e Industriales en el Sector Cannábico",
+    image: legalImage,
+    "activities": [
+      {
+        "time": "15:00 - 16:30",
+        "title": "Desafíos y Fracasos",
+        "description": "Experiencias emprendedoras ante la inestabilidad normativa de ARICCAME e INASE",
+        "speakers": [
+          "Eric Turiansky | Agrónomo agroecólogo | Miembro fundador del Grupo de Estudio y Trabajo en Cannabis de la Facultad de Agronomía (UBA) | Colaborador técnico en Genética La Maga | Especialista en cultivo sustentable y producción orgánica de Cannabis sativa para usos medicinales e industriales",
+          "Virginia Romaldi | Activista del cannabis | Vocera de Mujeres y Cannabis en Argentina | Ponente en ferias y charlas sobre cultivo y derechos del cannabis en Argentina",
+          "Candela Grossi | Activista del cannabis medicinal | Presidenta de Asociación Cultivo en Familia La Plata | Emprendedora de cosméticos con cannabis para uso terapéutico"
+        ],
+        "moderators": [
+          "Roxana Aguirre | Ciencia Sativa, Presidenta de la Federación Argentina de Cannabis y Cáñamo (FACC)"
+        ],
+        "location": "Canal de YouTube @semanadelcannabis",
+        "type": "Virtual",
+        "image": "legalImage"
       },
       {
-        time: "19:45",
-        title: "Conclusión y cierre de la Semana Cannabis",
-        description: "Propuestas y declaración conjunta de organizaciones.",
-        speakers: ["Representantes de organizaciones"],
-        location: "Auditorio Anexo Cámara de Diputados",
-        type: "Presencial",
-        image: legalImage
+        "time": "19:00 - 20:30",
+        "title": "Cannabis industrial",
+        "description": "La necesidad de adaptarse y sostenerse frente a un contexto regulatorio y económico incierto",
+        "speakers": [
+          "Rolando Garcia Bernardo | Doctor en Desarrollo Económico de la Universidad de Buenos Aires | Especialista en Agricultura, alimentación, cannabis, tecnologías e innovación",
+          "Gabriela Calzolary | Bióloga | Fundadora de la ONG Ciencia Sativa  | FACC | Investigadora asociada en INTA Alto Valle | Especialista en cultivo de Cannabis sativa para uso terapéutico y producción sustentable.",
+          "Gustavo Álvarez | Proyecto Socio-ambiental Oasis Cannábico de Traslasierra | Ex director del Programa Cáñamo del Ministerio de Bioagroindustrial de la Pcia. de Córdoba | FACC",
+          "Mike Bifari | Activista |  Cultivador e investigador de la planta de cannabis para todos sus usos | Colaborador del Museo del Cannabis (EEUU)"
+        ],
+        "moderators": [
+          "Eric Turiansky | Agrónomo agroecólogo ",
+          "Nicolás Costamagna | Asociación Civil Cogollos Córdoba | Secretaria de Producción FACC",
+        ],
+        "location": "Canal de YouTube @semanadelcannabis",
+        "type": "Virtual",
+        "image": "legalImage"
+      }
+    ]
+  },
+   {
+    "date": "2025-11-13",
+    "dayName": "Jueves 13",
+    "theme": "Cannabis, Cultura y Uso Responsable: Educación para la Convivencia",
+    "image": legalImage,
+    "activities": [
+      {
+        "time": "11:00 - 12:30",
+        "title": "Del estigma a la responsabilidad",
+        "description": "Uso adulto y regulación humanizada",
+        "speakers": [
+          "Mariela Hernández | Periodista | Presidenta de la fundación Latinoamérica Reforma",
+          "Verónica Russo | Red Latinoamericana y del Caribe de Personas que Usan Drogas",
+          "Martin Acuña | Asociación Civil MACU (Río Gallegos)"
+        ],
+        "moderators": [
+          "Facundo De Luca | Asociación Cannabicultora del Sur (ACS) | FACC"
+        ],
+        "location": "Canal de YouTube @semanadelcannabis",
+        "type": "Virtual",
+        "image": "legalImage"
+      },
+      {
+        "time": "19:00 - 21:00",
+        "title": "Obra de teatro Nogoyá",
+        "description": `
+¡La obra de teatro "NOGOYÁ"! 
+"Mientras no haya justicia el fuego seguirá quemando..." 
+
+📆 Jueves 13/11 
+•	Preludio + instalación audiovisual: 19.00 horas 
+•	Obra: de 20.00 a 21.00 horas 
+🏠En el Espacio de la Memoria “El Infierno”, (Secretaria de Derechos Humanos de la Municipalidad de Avellaneda) 
+•	Dirección: 12 de octubre 236 (Avellaneda) 
+✔️ Entrada libre y gratuita (hasta 50 personas). Colaboración voluntaria. 
+
+Las, les y los invitamos a participar de la presentación de la obra de teatro que trata sobre la masacre carcelaria más cruel de nuestra historia a realizarse en una antigua cárcel recuperada para la construcción de memoria _verdad y justicia.  NOGOYA, obra del Teatro Carnero se presentará en el Espacio de la Memoria El Infierno. 
+
+✔️ Acerca del Espacio Municipal de la Memoria El Infierno 
+En este edificio funcionó la Brigada de Lanús de la Policía Bonaerense y entre 1976 y 1978 un centro clandestino de detención, tortura y exterminio conocido como El Infierno, por el que pasaron al menos 604 personas desaparecidas. 
+Funcionó como dependencia policial hasta el año 2016. 
+Hoy es un espacio para la memoria, en el que funciona la Secretaria de Derechos Humanos de la Municipalidad de Avellaneda, con actividades abiertas a toda la comunidad. 
+
+✔️ Acerca de la obra Nogoyá 
+Se trata de una obra de teatro del grupo Teatro Carnero (Devoto, CABA), con dramaturgia y dirección de Sebastián Moreno,  basada en el libro "Masacre del Pabellón VII".  de la abogada Claudia Cesaroni que narra lo ocurrido el 14 de marzo de 1978 en la Cárcel de Devoto,  en plena dictadura militar, en la que fueron asfixiados, quemados, torturados, baleados 65 presos denominados comunes. 
+
+✔️ Acerca de la Masacre del Pabellón VII 
+En tiempos de dictadura, en las cárceles legales también se aplicaron métodos terroristas extremos para disciplinar a la población carcelaria.  La Masacre del Pabellón VII, en la cárcel de Villa Devoto, se produjo en ese contexto, cuando una requisa se transformó en un infierno. La versión oficial dio a conocer los cruentos hechos como el “motín de los colchones”, acusando a los propios presos, pero años después los sobrevivientes y quienes apoyaron su causa, lucharon por la verdad, para que se supiera que fue una masacre y que fue una violación a los derechos humanos y por lo tanto un crimen de lesa humanidad imprescriptible. 
+Hace un año inició el juicio por el cual se están juzgando estos hechos.  El próximo 10 de diciembre, esperamos que la Justicia se expida luego de los alegatos que fueron realmente contundentes.  Exigimos Justicia para los sobrevivientes y sus familias, así como para las familias de las 65 víctimas de esta masacre. 
+
+✔️ El prohibicionismo mata 
+En el año 1974, la Ley 20.771 penalizó la tenencia de estupefacientes  para uso personal, lo que generó en un contexto represivo y autoritario, que las cárceles se llenaran de infractores de la ley, usuarios de sustancias como la Marihuana. Aquel fatídico día en el Pabellón VII había presos como Luis María Canosa, Ariel Omar Colavini y Armando Luis Ambrosio, que estaban presos por portar unos pocos gramos de marihuana. Es por esto que para la comunidad cannábica esta masacre nos recuerda a los extremos a los que puede llegar un sistema punitivista y prohibicionista que nos persigue y nos criminaliza.  Nuestra lucha es una lucha por los Derechos Humanos, por nuestras libertades y por los derechos de las personas privadas de su libertad. Por eso nuestra comunidad se suma al grito por la memoria, verdad y justicia: 
+ _Masacre del Pabellón VII NUNCA MÁS
+Luis María Canosa, Ariel Colavini, Armando Ambrosio y las 65 víctimas de la masacre PRESENTE, AHORA Y SIEMPRE_
+        `,
+        speakers: [],
+        "moderators": [],
+        "location": "El Infierno, Secretaría de DDHH Avellaneda",
+        "type": "Presencial",
+        "image": "legalImage"
+      }
+    ]
+  },
+  {
+    "date": "2025-11-15",
+    "dayName": "Viernes 15",
+    "theme": "Incidencia Política: El Cannabis en la Agenda Pública",
+    "image": legalImage,
+    "activities": [
+      {
+        "time": "15:00 - 16:45",
+        "title": "Reforma Penal y Persecución al Usuario de Cannabis",
+        "description": "¿Un Paradigma que Cambia o Persiste?",
+        "speakers": [
+          "Fausto Berjolis | Abogado penalista | Ex Defensor Público | Coadyuvante del fuero federal de CABA | Autoridad en ARFAC | Miembro de RACME",
+          "Joe Stefanolo | Abogado penalista | Referente en derecho y política de drogas | Impulsor del fallo Bazterrica sobre tenencia para consumo personal | Especialista en legislación del cannabis en Argentina",
+          "Lila Torres | Docente-investigadora de la Universidad Nacional de La Plata (UNLP) | Responsable de la Cátedra Libre “Patrimonio Cultural Inmaterial” en la UNLP | Especialista en cultura, organización social y política del cannabis en Argentina | FACC",
+          "Stella Nuñez | Asociación Tricomas del Sur"
+        ],
+        "moderators": [
+          "Tavo Depaoli | Acción Cannábica | Red Federal de Abogacía |  Secretaria legales Federación Argentina de Cannabis y Cáñamo (FACC)"
+        ],
+        "location": "Auditorio Anexo Cámara de Diputados",
+        "type": "Presencial",
+        "image": "legalImage"
+      },
+      {
+        "time": "17:00 - 19:45",
+        "title": "Ley 23.737 y su impacto",
+        "description": "Derechos vulnerados y caminos a la Reforma",
+        "speakers": [
+          "Florencia Corbelle | Activista | Programa de Antropología Política y Jurídica, Instituto de Ciencias Antropológicas, UBA/CONICET",
+          "Gastón Kapcitzky | Activista | Asociación Civil Colectivo Cannábico Traslasierra | FACC",
+          "Facundo De Luca | Activista | Asociación Cannabicultora del Sur (ACS) | FACC",
+          "Nermi Zappia | Activista |Jardín del Unicornio"
+        ],
+        "moderators": [
+          "Daniela Rodriguez | Activista | Asociacion Acción Cannábica | FACC"
+        ],
+        "location": "Auditorio Anexo Cámara de Diputados",
+        "type": "Presencial",
+        "image": "legalImage"
+      },
+      {
+        "time": "19:45 - 20:15",
+        "title": "Conclusión y cierre de la semana Cannabis",
+        "description": "Cierre: Lectura de declaración de La Semana del Cannabis",
+        "speakers": [],
+        "moderators": [],
+        "location": "Auditorio Anexo Cámara de Diputados",
+        "type": "Presencial",
+        "image": "legalImage"
       }
     ]
   },
@@ -159,9 +289,18 @@ const scheduleData = [
       {
         time: "14:00 - 17:00",
         title: "Pre-Marcha: Festival Cultural",
-        description: "Música, DJs, performances y stands informativos",
-        speakers: ["Artistas", "Organizaciones"],
-        location: "Plaza de Concentración",
+        description: `
+✨ Streaming en Vivo
+🎧 DJs en escena
+💃 Performances increíbles
+🌿 Stands informativos y buena vibra
+🎉 ¡Todo en un mismo lugar!
+`,
+        speakers: [
+          "Organizaciones cannábicas y organizaciones sociales afines",
+          "Toda persona que utiliza y/o respeta el cannabis"],
+        moderators: [],
+        location: "Plaza de Mayo, Ciudad Autónoma de Buenos Aires",
         type: "Presencial"
       },
       {
@@ -169,6 +308,7 @@ const scheduleData = [
         title: "15ª Marcha Nacional de la Marihuana",
         description: "Recorrido por Buenos Aires",
         speakers: ["Toda la comunidad"],
+        moderators: [],
         location: "Desde Plaza hasta Congreso",
         type: "Presencial"
       }
@@ -177,198 +317,15 @@ const scheduleData = [
 ];
 
 
-/*const scheduleData = [
-  {
-    date: "2025-11-10",
-    dayName: "Lunes 10",
-    theme: "Cannabis y Sociedad: Desafíos Legales y Derechos Humanos",
-    image: legalImage,
-    activities: [
-      {
-        time: "11:00",
-        title: "Conferencia de Prensa de Lanzamiento",
-        description: "Presentación de objetivos y agenda de actividades",
-        speakers: ["Organizaciones cannábicas", "OSC", "Referentes destacados"],
-        location: "Auditorio Principal",
-        type: "Presencial"
-      },
-      {
-        time: "14:00 - 17:00",
-        title: "Panel: La Ley 23.737 en el Siglo XXI",
-        description: "Impacto Social y Necesidad de Reforma",
-        speakers: ["Abogados especialistas", "Jueces", "Fiscales", "Activistas"],
-        location: "Sala de Debates",
-        type: "Híbrido"
-      },
-      {
-        time: "18:00 - 20:00",
-        title: "Taller: Conocé tus Derechos",
-        description: "Asesoramiento Legal para Usuarios y Cultivadores",
-        speakers: ["Equipos legales de organizaciones"],
-        location: "Aula 1",
-        type: "Presencial"
-      }
-    ]
-  },
-  {
-    date: "2025-11-11",
-    dayName: "Martes 11",
-    theme: "Cannabis Medicinal: Ciencia, Acceso y Calidad de Vida",
-    image: medicalImage,
-    activities: [
-      {
-        time: "10:30 - 13:00",
-        title: "Jornada de Actualización Médica",
-        description: "Cannabis Terapéutico: Evidencia Científica y Protocolos",
-        speakers: ["Médicos", "Investigadores", "Farmacéuticos"],
-        location: "Auditorio Médico",
-        type: "Presencial"
-      },
-      {
-        time: "15:00 - 17:00",
-        title: "Roles ante Reprocann",
-        description: "ONGs y Cultivadores Solidarios",
-        speakers: ["ONGs especializadas", "Cultivadores solidarios"],
-        location: "Sala de Conferencias",
-        type: "Híbrido"
-      },
-      {
-        time: "18:00 - 20:00",
-        title: "Taller: Autocultivo Medicinal Responsable",
-        description: "Marco de la Ley 27.350",
-        speakers: ["Especialistas en cultivo"],
-        location: "Laboratorio",
-        type: "Presencial"
-      }
-    ]
-  },
-  {
-    date: "2025-11-12",
-    dayName: "Miércoles 12",
-    theme: "Cannabis Industrial y Nuevas Economías",
-    image: industrialImage,
-    activities: [
-      {
-        time: "10:30 - 13:00",
-        title: "Foro Empresarial: Cáñamo Industrial",
-        description: "Potencial Productivo y Marco Regulatorio",
-        speakers: ["Empresarios", "Inversores", "Agrónomos", "Funcionarios"],
-        location: "Centro de Negocios",
-        type: "Presencial"
-      },
-      {
-        time: "14:00 - 17:00",
-        title: "Feria de Emprendedores Cannábicos",
-        description: "Exposición y venta de productos derivados del cáñamo",
-        speakers: ["Emprendedores", "Empresas del sector"],
-        location: "Pabellón de Exposiciones",
-        type: "Presencial"
-      },
-      {
-        time: "18:00 - 20:00",
-        title: "Cannabis en la Gastronomía",
-        description: "Innovación y Tendencias",
-        speakers: ["Chef especializado"],
-        location: "Cocina Demostrativa",
-        type: "Presencial"
-      }
-    ]
-  },
-  {
-    date: "2025-11-13",
-    dayName: "Jueves 13",
-    theme: "Cannabis, Cultura y Uso Responsable",
-    image: culturalImage,
-    activities: [
-      {
-        time: "10:30 - 13:00",
-        title: "Ciclo de Cine/Documentales",
-        description: "Miradas sobre el Cannabis: Realidades y Ficción",
-        speakers: ["Directores", "Especialistas"],
-        location: "Cine Auditorio",
-        type: "Presencial"
-      },
-      {
-        time: "15:00 - 17:00",
-        title: "Uso Adulto Responsable",
-        description: "Desmitificando el Consumo",
-        speakers: ["Especialistas en salud pública"],
-        location: "Auditorio Principal",
-        type: "Híbrido"
-      },
-      {
-        time: "18:00 - 20:00",
-        title: "Muestra de Arte: Cannabis en Escena",
-        description: "Exposición artística y performances",
-        speakers: ["Artistas plásticos", "Músicos", "Performers"],
-        location: "Galería de Arte",
-        type: "Presencial"
-      }
-    ]
-  },
-  {
-    date: "2025-11-14",
-    dayName: "Viernes 14",
-    theme: "Incidencia Política: Cannabis en la Agenda Pública",
-    image: legalImage,
-    activities: [
-      {
-        time: "10:30 - 13:00",
-        title: "Foro Legislativo",
-        description: "Hacia una Regulación Integral del Cannabis",
-        speakers: ["Legisladores", "Representantes ministeriales"],
-        location: "Auditorio Legislativo",
-        type: "Híbrido"
-      },
-      {
-        time: "15:00 - 17:00",
-        title: "Taller de Activismo y Comunicación",
-        description: "Estrategias para la Incidencia",
-        speakers: ["Organizaciones", "Activistas"],
-        location: "Aula de Capacitación",
-        type: "Presencial"
-      },
-      {
-        time: "18:00 - 20:00",
-        title: "Preparación para la Marcha",
-        description: "Armado de Banderas y Consignas",
-        speakers: ["Organizadores de la marcha"],
-        location: "Espacio Comunitario",
-        type: "Presencial"
-      }
-    ]
-  },
-  {
-    date: "2025-11-15",
-    dayName: "Sábado 15",
-    theme: "La Gran Marcha: Por una Regulación Justa",
-    image: marchImage,
-    activities: [
-      {
-        time: "14:00 - 17:00",
-        title: "Pre-Marcha: Festival Cultural",
-        description: "Música, DJs, performances y stands informativos",
-        speakers: ["Artistas", "Organizaciones"],
-        location: "Plaza de Concentración",
-        type: "Presencial"
-      },
-      {
-        time: "18:00",
-        title: "15ª Marcha Nacional de la Marihuana",
-        description: "Recorrido por Buenos Aires",
-        speakers: ["Toda la comunidad"],
-        location: "Desde Plaza hasta Congreso",
-        type: "Presencial"
-      }
-    ]
-  }
-];*/
+
 
 export default function ActivitySchedule() {
   const [selectedDay, setSelectedDay] = useState(0);
 
   const handleRegisterActivity = (activity: string) => {
-    console.log(`Registro para actividad: ${activity}`);
+    //alert(`Registro para actividad: ${activity}`);
+    const url = window.location.origin + '#registrar';
+    window.open(url, '_blank');
     // Mock registration functionality
   };
 
@@ -394,8 +351,8 @@ export default function ActivitySchedule() {
           <Card className="mb-8">
             <CardHeader>
               <div className="flex flex-col md:flex-row gap-6">
-                <img 
-                  src={scheduleData[selectedDay].image} 
+                <img
+                  src={scheduleData[selectedDay].image}
                   alt={scheduleData[selectedDay].theme}
                   className="w-full md:w-48 h-32 object-cover rounded-lg"
                 />
@@ -408,7 +365,7 @@ export default function ActivitySchedule() {
                   </p>
                   <div className="flex items-center gap-2 mt-2 text-muted-foreground">
                     <Calendar className="w-4 h-4" />
-                    <span>{new Date(scheduleData[selectedDay].date).toLocaleDateString('es-AR')}</span>
+                    <span>{new Date(scheduleData[selectedDay].date + "T00:00:00").toLocaleDateString('es-AR')}</span>
                   </div>
                 </div>
               </div>
@@ -427,16 +384,16 @@ export default function ActivitySchedule() {
                         {activity.time}
                       </Badge>
                     </div>
-                    
+
                     <div className="flex-1">
                       <h4 className="font-semibold text-lg text-foreground mb-2">
                         {activity.title}
                       </h4>
-                      <p className="text-muted-foreground mb-3">
+                      <pre  className="font-semibold mb-3 whitespace-pre-wrap">
                         {activity.description}
-                      </p>
-                      
-                      <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-3">
+                      </pre>
+
+                      <div className="flex flex-col gap-1 text-sm text-muted-foreground mb-3">
                         <div className="flex items-center gap-1">
                           <MapPin className="w-3 h-3" />
                           {activity.location}
@@ -446,26 +403,41 @@ export default function ActivitySchedule() {
                           {activity.type}
                         </div>
                       </div>
-                      
+                      {activity.speakers && activity.speakers.length > 0 && (
                       <div className="mb-4">
-                        <p className="text-sm font-medium text-foreground mb-1">Participan:</p>
-                        <div className="flex flex-wrap gap-1">
+                        <Badge className="">Participan:</Badge>
+                        <ul className="list-disc pl-5 space-y-1">
                           {activity.speakers.map((speaker, speakerIndex) => (
-                            <Badge key={speakerIndex} variant="secondary" className="text-xs">
-                              {speaker}
-                            </Badge>
+                            <li>{speaker}</li>
                           ))}
-                        </div>
+                        </ul>
                       </div>
+                    )}
+
+                      {
+                        activity.moderators && activity.moderators.length > 0 && (
+                          <div className="mb-4">
+                            <Badge className="">{activity.moderators.length == 1 ? "Modera:" : "Moderan:"}</Badge>
+                            <ul className="list-disc pl-5 space-y-1">
+                              {activity.moderators.map((moderator, speakerIndex) => (
+                                <li key={speakerIndex}>{moderator}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        )
+
+
+                      }
                     </div>
-                    
+
                     <div className="flex-shrink-0">
-                      <Button 
+                      <Button
                         variant="outline"
-                        onClick={() => handleRegisterActivity(activity.title)}
                         data-testid={`register-activity-${index}`}
                       >
-                        Registrarse
+                        <Link href="/registro" onClick={() => window.scrollTo(0, 0)}>
+                          Registrarse
+                        </Link>
                       </Button>
                     </div>
                   </div>

@@ -5,6 +5,7 @@ import { Menu, X, Leaf } from "lucide-react";
 
 const navItems = [
   { name: "Inicio", path: "/" },
+  { name: "Registro", path: "/registro" },
   { name: "Actividades", path: "/actividades" },
   { name: "Exponentes", path: "/exponentes" },
   { name: "Nota", path: "/nota" },
@@ -24,7 +25,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 font-display font-bold text-xl text-primary">
             <Leaf className="w-6 h-6" />
-            Cannabis 2025
+            
           </Link>
 
           {/* Desktop Navigation */}

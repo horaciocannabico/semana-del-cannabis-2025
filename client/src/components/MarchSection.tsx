@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, MapPin, Users, Megaphone, Heart } from "lucide-react";
 import marchImage from "@assets/generated_images/marcha-cannabis4jpg.webp";
+import { Link } from "wouter";
+
 
 // todo: remove mock functionality
 const marchData = {
@@ -228,11 +230,12 @@ export default function MarchSection() {
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button
                   className="flex-1"
-                  onClick={handleParticipate}
                   data-testid="button-participate-march"
                 >
                   <Users className="w-4 h-4 mr-2" />
-                  Participar
+                  <Link href="/registro"  onClick={() => window.scrollTo(0, 0)}>
+                    Participar
+                  </Link>
                 </Button>
                 <Button
                   variant="outline"

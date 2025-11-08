@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Navigation, Phone, Clock, Video } from "lucide-react";
+import { Link } from "wouter";
 
 
 // todo: remove mock functionality - integrate real map when available
@@ -8,12 +9,22 @@ const locationData = [
   {
     day: "Lunes",
     date: "10",
-    name: "Secretaría de Derechos Humanos - Avellaneda",
-    address: "12 de octubre 234, Avellaneda",
+    name: "Casa del Bicentenario - Avellaneda",
+    address: "Colón 746, Partido de Avellaneda",
     isVirtual: false,
-    coordinates: { lat: -34.6632, lng: -58.3689 },
-    phone: "+54 11 2102-4082",
-    hours: "9:00 - 18:00"
+    coordinates: { lat: -34.6663026, lng: -58.3711744 },
+    phone: "",
+    hours: "16:00 - 18:00"
+  },
+  {
+    day: "Lunes",
+    date: "10",
+    name: "UTN Sede Avellaneda",
+    address: "Av. Bartolomé Mitre 750, Partido de Avellaneda",
+    isVirtual: false,
+    coordinates: { lat: -34.6622935, lng: -58.3648271 },
+    phone: "",
+    hours: "19:00 - 21:00"
   },
   {
     day: "Martes",
@@ -58,14 +69,25 @@ const locationData = [
     "day": "Jueves",
     "date": "14",
     "name": "Obra de Teatro \"Nogotá\"",
-    "address": "12 de octubre 234, Avellaneda",
+    "address": `
+Espacio de la Memoria “El Infierno”
+Secretaria de Derechos Humanos de la Municipalidad de Avellaneda. 
+Direccion: 12 de octubre 236, Avellaneda`,
     "isVirtual": false,
     "coordinates": { "lat": -34.6632, "lng": -58.3689 },
     "phone": "+54 11 2102-4082",
-    "hours": "19:30",
+    "hours": "19:00",
     "location": "Secretaría de Derechos Humanos - Avellaneda",
     "localidades": "A confirmar",
-    "descripcion": "Puesta en escena en el marco de la exposición 'Cárceles. Narraciones del encierro (1878-2025)' organizada por la Biblioteca Nacional. Narra la tragedia conocida como la Masacre en el Pabellón Séptimo ocurrida el 14 de marzo de 1978 en la cárcel de Devoto, donde murieron al menos 65 presos. Declarada de Interés Cultural por la Cámara de Diputados de la Nación y de Interés para la Promoción de los Derechos Humanos por la Legislatura de CABA. Entrada libre y gratuita."
+    "descripcion": `
+•	Preludio + instalación audiovisual: 19.00 horas 
+•	Obra: de 20.00 a 21.00 horas 
+🏠En el Espacio de la Memoria “El Infierno”, (Secretaria de Derechos Humanos de la Municipalidad de Avellaneda) 
+•	Dirección: 12 de octubre 236 (Avellaneda) 
+✔️ Entrada libre y gratuita (hasta 50 personas). Colaboración voluntaria. 
+Reservar entrada
+
+  `
   },
   {
     day: "Viernes",
@@ -77,21 +99,8 @@ const locationData = [
     phone: "+54 11 4127-7000",
     hours: "14:30 - 19:00",
     descripcion: "El evento requiere inscripción previa y acreditación con DNI.",
-    link: "/#registro",
+    link: "/registro",
     linkDescription: "Registrate aquí",
-  },
-  {
-    day: "Viernes",
-    date: "14",
-    name: "Visita Museo del Cannabis",
-    address: "Araoz 689, Villa Crespo, CABA",
-    isVirtual: false,
-    "coordinates": {
-      "lat": -34.598034572843616,
-      "lng": -58.436526787789944
-    },
-    phone: "+54 11 2604-0420",
-    hours: "20:00 - 22:00",
   }
 ];
 
@@ -132,7 +141,7 @@ export default function LocationMap() {
                   <div>
                     <h3 className="font-bold text-lg text-foreground">{loc.name}</h3>
                     {!loc.isVirtual && loc.address && (
-                      <p className="text-muted-foreground">{loc.address}</p>
+                      <pre className="text-muted-foreground">{loc.address}</pre>
                     )}
                     {loc.isVirtual && (
                       <p className="text-muted-foreground flex items-center gap-2">
@@ -172,6 +181,12 @@ export default function LocationMap() {
                     </Button>
                   )}
 
+                  {/* Mostrar descripción si existe */}
+                  {loc.descripcion && (
+                    <pre className="mt-4 mb-3 p-2 text-muted-foreground font-bold">{loc.descripcion}</pre>
+                  )}
+
+
                   {/* Mapa real con Google Maps (solo presencial) */}
                   {!loc.isVirtual && loc.address && (
                     <div className="rounded-lg border overflow-hidden">
@@ -185,10 +200,6 @@ export default function LocationMap() {
                         title={`Mapa de ${loc.name}`}
                         className="w-full"
                       />
-                      {/* Mostrar descripción si existe */}
-                      {loc.descripcion && (
-                        <p className="mt-4 mb-3 p-2 text-muted-foreground font-bold">{loc.descripcion}</p>
-                      )}
                     </div>
                   )}
                 </div>
