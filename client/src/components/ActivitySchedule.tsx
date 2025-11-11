@@ -139,7 +139,7 @@ const scheduleData = [
           "Candela Grossi | Activista del cannabis medicinal | Presidenta de Asociación Cultivo en Familia La Plata | Emprendedora de cosméticos con cannabis para uso terapéutico"
         ],
         "moderators": [
-          "Silvi Vapo | Emprendedora de Silvivape" 
+          "Nicolás Costamagna | Asociación Civil Cogollos Córdoba | Secretaria de   Producción FACC" 
         ],
         "location": "Canal de YouTube @semanadelcannabis",
         "type": "Virtual",
@@ -150,9 +150,9 @@ const scheduleData = [
         "title": "Cannabis industrial",
         "description": "La necesidad de adaptarse y sostenerse frente a un contexto regulatorio y económico incierto",
         "speakers": [
-          "Rolando Garcia Bernardo | Doctor en Desarrollo Económico de la Universidad de Buenos Aires | Especialista en Agricultura, alimentación, cannabis, tecnologías e innovación",
-          "Gabriela Calzolary | Bióloga | Fundadora de la ONG Ciencia Sativa  | FACC | Investigadora asociada en INTA Alto Valle | Especialista en cultivo de Cannabis sativa para uso terapéutico y producción sustentable.",
-          "Gustavo Álvarez | Proyecto Socio-ambiental Oasis Cannábico de Traslasierra | Ex director del Programa Cáñamo del Ministerio de Bioagroindustrial de la Pcia. de Córdoba | FACC",
+          "Rolando Garcia Bernado | Doctor en Desarrollo Económico de la Universidad de Buenos Aires | Especialista en Agricultura, alimentación, cannabis, tecnologías e innovación",
+          "Diana Barreneche   |Abogada ambientalista, especialista y consultora en desarrollo con Cáñamo | Fundadora de Asociación Civil Proyecto Cañamo y de  la red federal de Abogacía Cannabica- ARFAC| FACC |",
+          "Gustavo Álvarez | Proyecto Socio-ambiental Oasis Cannábico de Traslasierra | Ex director del Programa Cáñamo del Ministerio de Bioagroindustrial de la Pcia. de Córdoba",
           "Mike Bifari | Activista |  Cultivador e investigador de la planta de cannabis para todos sus usos | Colaborador del Museo del Cannabis (EEUU)"
         ],
         "moderators": [
@@ -177,7 +177,7 @@ const scheduleData = [
         "description": "Uso adulto y regulación humanizada",
         "speakers": [
           "Mariela Hernández | Periodista | Presidenta de la fundación Latinoamérica Reforma",
-          "Verónica Russo | Red Latinoamericana y del Caribe de Personas que Usan Drogas",
+          "Verónica Russo | Activista feminista antoprohibicionista | Miembro de la mesa de coordinación de RADAUD  y de la secretaría regional de LANPUD | Experta en reducción de daños, DDHH y VIH",
           "Martin Acuña | Asociación Civil MACU (Río Gallegos)"
         ],
         "moderators": [
@@ -241,7 +241,8 @@ Luis María Canosa, Ariel Colavini, Armando Ambrosio y las 65 víctimas de la ma
         "speakers": [
           "Fausto Berjolis | Abogado penalista | Ex Defensor Público | Coadyuvante del fuero federal de CABA | Autoridad en ARFAC | Miembro de RACME",
           "Joe Stefanolo | Abogado penalista | Referente en derecho y política de drogas | Impulsor del fallo Bazterrica sobre tenencia para consumo personal | Especialista en legislación del cannabis en Argentina",
-          "Lila Torres | Docente-investigadora de la Universidad Nacional de La Plata (UNLP) | Responsable de la Cátedra Libre “Patrimonio Cultural Inmaterial” en la UNLP | Especialista en cultura, organización social y política del cannabis en Argentina | FACC",
+          "Lila Torre | Secretaria e investigadora de la Cátedra Libre Patrimonio Cultural Inmaterial: memorias y colectivos sociales - Universidad Nacional de La Plata | Investiga sobre comunidad cannábica organizada y derechos culturales en Argentina
+",
           "Stella Nuñez | Asociación Tricomas del Sur"
         ],
         "moderators": [
@@ -257,7 +258,7 @@ Luis María Canosa, Ariel Colavini, Armando Ambrosio y las 65 víctimas de la ma
         "description": "Derechos vulnerados y caminos a la Reforma",
         "speakers": [
           "Florencia Corbelle | Activista | Programa de Antropología Política y Jurídica, Instituto de Ciencias Antropológicas, UBA/CONICET",
-          "Gastón Kapcitzky | Activista | Asociación Civil Colectivo Cannábico Traslasierra | FACC",
+          "Federico Sinagra | Asociación Cultivando Derecho",
           "Facundo De Luca | Activista | Asociación Cannabicultora del Sur (ACS) | FACC",
           "Nermi Zappia | Activista |Jardín del Unicornio"
         ],
@@ -451,4 +452,5 @@ export default function ActivitySchedule() {
   );
 
 }
+
 
