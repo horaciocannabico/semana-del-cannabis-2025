@@ -109,8 +109,8 @@ const scheduleData = [
           "Dra. Laura Padovani | Dispositivo de Salud Cannábica (Dispensario de San Lorenzo / Hospital Regional de Mina Clavero)",
           "Alejandro Alvarez | Presidente Asociación Civil Colectivo Cannábico Traslasierra | FACC",
           "Karina Romanelli | Asociación Civil Cultivo Mi Medicina | Consejo Consultivo Honorario del Programa de Cannabis Medicinal (REPROCANN)",
-          "Jorge Capriotti | Médico neurólogo - Universidad Nacional de Rosario | Docente Clínica Médica y tutor de residencia en la carrera de posgrado Neurología (UNR) | Consultorio de cannabis del Hospital Centenario de Rosario",
-          "Carina Villarreal | Doingcanna | Secretaria de Salud FACC"
+          "Jorge Capriotti | Médico neurólogo - Universidad Nacional de Rosario | Docente Clínica Médica y tutor de residencia en la carrera de posgrado Neurología (UNR) | Consultorio de cannabis del Hospital Centenario de Rosario"
+          
         ],
         "moderators": [
           "Natalia Castro | Asociación Civil Colectivo Cannábico Traslasierra | Secretaria de Comunicación Federación Argentina de Cannabis y Cáñamo (FACC)",
@@ -449,4 +449,5 @@ export default function ActivitySchedule() {
       </div>
     </section>
   );
+
 }
