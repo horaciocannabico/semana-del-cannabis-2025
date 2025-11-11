@@ -139,7 +139,7 @@ const scheduleData = [
           "Candela Grossi | Activista del cannabis medicinal | Presidenta de Asociación Cultivo en Familia La Plata | Emprendedora de cosméticos con cannabis para uso terapéutico"
         ],
         "moderators": [
-          "Roxana Aguirre | Ciencia Sativa, Presidenta de la Federación Argentina de Cannabis y Cáñamo (FACC)"
+          "Silvi Vapo | Emprendedora de Silvivape" 
         ],
         "location": "Canal de YouTube @semanadelcannabis",
         "type": "Virtual",
@@ -451,3 +451,4 @@ export default function ActivitySchedule() {
   );
 
 }
+
