@@ -257,7 +257,7 @@ Luis María Canosa, Ariel Colavini, Armando Ambrosio y las 65 víctimas de la ma
         "description": "Derechos vulnerados y caminos a la Reforma",
         "speakers": [
           "Florencia Corbelle | Activista | Programa de Antropología Política y Jurídica, Instituto de Ciencias Antropológicas, UBA/CONICET",
-          "Federico Sinagra | Asociación Cultivando Derecho",
+          "Federico Sinagra | Activista | Asociación Cultivando Derecho",
           "Facundo De Luca | Activista | Asociación Cannabicultora del Sur (ACS) | FACC",
           "Nermi Zappia | Activista |Jardín del Unicornio"
         ],
@@ -451,6 +451,7 @@ export default function ActivitySchedule() {
   );
 
 }
+
 
 
 
