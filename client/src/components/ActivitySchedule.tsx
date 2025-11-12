@@ -241,8 +241,7 @@ Luis María Canosa, Ariel Colavini, Armando Ambrosio y las 65 víctimas de la ma
         "speakers": [
           "Fausto Berjolis | Abogado penalista | Ex Defensor Público | Coadyuvante del fuero federal de CABA | Autoridad en ARFAC | Miembro de RACME",
           "Joe Stefanolo | Abogado penalista | Referente en derecho y política de drogas | Impulsor del fallo Bazterrica sobre tenencia para consumo personal | Especialista en legislación del cannabis en Argentina",
-          "Lila Torre | Secretaria e investigadora de la Cátedra Libre Patrimonio Cultural Inmaterial: memorias y colectivos sociales - Universidad Nacional de La Plata | Investiga sobre comunidad cannábica organizada y derechos culturales en Argentina
-",
+          "Lila Torre | Secretaria e investigadora de la Cátedra Libre Patrimonio Cultural Inmaterial: memorias y colectivos sociales - Universidad Nacional de La Plata | Investiga sobre comunidad cannábica organizada y derechos culturales en Argentina",
           "Stella Nuñez | Asociación Tricomas del Sur"
         ],
         "moderators": [
@@ -452,5 +451,6 @@ export default function ActivitySchedule() {
   );
 
 }
+
 
 
