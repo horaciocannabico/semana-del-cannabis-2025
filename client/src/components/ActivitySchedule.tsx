@@ -262,7 +262,7 @@ Luis María Canosa, Ariel Colavini, Armando Ambrosio y las 65 víctimas de la ma
           "Nermi Zappia | Activista |Jardín del Unicornio"
         ],
         "moderators": [
-          "Daniela Rodriguez | Activista | Asociacion Acción Cannábica | FACC"
+          "Daniela Rodriguez | Acción Cannábica | Secretaría de Género FACC"
         ],
         "location": "Auditorio Anexo Cámara de Diputados",
         "type": "Presencial",
@@ -451,6 +451,7 @@ export default function ActivitySchedule() {
   );
 
 }
+
 
 
 
