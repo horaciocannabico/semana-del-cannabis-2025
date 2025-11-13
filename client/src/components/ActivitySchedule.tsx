@@ -240,7 +240,7 @@ Luis María Canosa, Ariel Colavini, Armando Ambrosio y las 65 víctimas de la ma
         "description": "¿Un Paradigma que Cambia o Persiste?",
         "speakers": [
           "Fausto Berjolis | Abogado penalista | Ex Defensor Público | Coadyuvante del fuero federal de CABA | Autoridad en ARFAC | Miembro de RACME",
-          "Joe Stefanolo | Abogado penalista | Referente en derecho y política de drogas | Impulsor del fallo Bazterrica sobre tenencia para consumo personal | Especialista en legislación del cannabis en Argentina",
+          "Casandra Bonilla  | Abogada orientación derecho penal e internacional público |   Diplomado en Cannabis, Enteógenos y política de drogas (UNQ)|Docente ayudante Fuentes del derecho internacional público (UBA) | Integrante  RACME (CONICET)",
           "Lila Torre | Secretaria e investigadora de la Cátedra Libre Patrimonio Cultural Inmaterial: memorias y colectivos sociales - Universidad Nacional de La Plata | Investiga sobre comunidad cannábica organizada y derechos culturales en Argentina",
           "Stella Nuñez | Asociación Tricomas del Sur"
         ],
@@ -451,6 +451,7 @@ export default function ActivitySchedule() {
   );
 
 }
+
 
 
 
